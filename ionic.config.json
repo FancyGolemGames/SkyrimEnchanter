@@ -1,0 +1,8 @@
+{
+  "name": "Enchanter",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "pro_id": "eeee0c0d"
+}
