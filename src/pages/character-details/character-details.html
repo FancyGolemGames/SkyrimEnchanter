@@ -1,0 +1,117 @@
+<!--
+  Generated template for the CharacterDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Character Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <h1>Basic Info</h1>
+    <ion-list>
+        <ion-item>Name: {{Chara.name}}</ion-item>
+        <ion-item>Enchanting Level: {{Chara.enchLevel}}</ion-item>
+        <ion-item>Destruction Level: {{Chara.destLevel}}</ion-item>
+        <ion-item>Conjuration Level: {{Chara.conjLevel}}</ion-item>
+        <ion-item>Illusion Level: {{Chara.illLevel}}</ion-item>
+        <ion-item>Alteration Level: {{Chara.altLevel}}</ion-item>
+        <ion-item>Restoration Level: {{Chara.resLevel}}</ion-item>
+    </ion-list>
+    <h1>Perks</h1>
+    <h3>Augmented Frost</h3>
+    <ion-list radio-group name="dplFire" [(ngModel)]="Chara.dplFire">
+        <ion-item>
+            <ion-label>Not Taken</ion-label>
+            <ion-radio value="0" disabled="true"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Level 1</ion-label>
+            <ion-radio value="1" disabled="true"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Level 2</ion-label>
+            <ion-radio value="2" disabled="true"></ion-radio>
+        </ion-item>
+    </ion-list>
+    <h3>Augmented Frost</h3>
+      <ion-list radio-group name="dplIce" [(ngModel)]="Chara.dplIce">
+        <ion-item>
+            <ion-label>Not Taken</ion-label>
+            <ion-radio value="0" disabled="true"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Level 1</ion-label>
+            <ion-radio value="1" disabled="true"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Level 2</ion-label>
+            <ion-radio value="2" disabled="true"></ion-radio>
+        </ion-item>
+      </ion-list>
+    <h3>Augmented Shock</h3>
+      <ion-list radio-group name="dplShock" [(ngModel)]="Chara.dplShock">
+        <ion-item>
+            <ion-label>Not Taken</ion-label>
+            <ion-radio value="0" disabled="true"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Level 1</ion-label>
+            <ion-radio value="1" disabled="true"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Level 2</ion-label>
+            <ion-radio value="2" disabled="true"></ion-radio>
+        </ion-item>
+      </ion-list>
+    <h3>Enchanter</h3>
+      <ion-list radio-group name="eplEnchanter" [(ngModel)]="Chara.eplEnchanter">
+        <ion-item>
+            <ion-label>Not Taken</ion-label>
+            <ion-radio value="0" disabled="true"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Level 1</ion-label>
+            <ion-radio value="1" disabled="true"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Level 2</ion-label>
+            <ion-radio value="2" disabled="true"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Level 3</ion-label>
+            <ion-radio value="3" disabled="true"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Level 4</ion-label>
+            <ion-radio value="4" disabled="true"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Level 5</ion-label>
+            <ion-radio value="5" disabled="true"></ion-radio>
+        </ion-item>
+      </ion-list>
+    <h1>Other Perks</h1>
+    <ion-list>
+        <ion-item *ngIf=Chara.epFire>Fire Enchanter</ion-item>
+        <ion-item *ngIf=Chara.epIce>Frost Enchanter</ion-item>
+        <ion-item *ngIf=Chara.epShock>Storm Enchanter</ion-item>
+        <ion-item *ngIf=Chara.epInsightful>Insightful Enchanter</ion-item>
+        <ion-item *ngIf=Chara.epCorpus>Corpus Enchanter</ion-item>
+        <ion-item *ngIf=Chara.epExtra>Extra Effect</ion-item>
+        <ion-item *ngIf=Chara.stability>Stability (Alteration)</ion-item>
+        <ion-item *ngIf=Chara.kindred>Kindred Mage (Illusion)</ion-item>
+        <ion-item *ngIf=Chara.animage>Animage (Illusion)</ion-item>
+        <ion-item *ngIf=Chara.necromage>Necromage (Restoration)</ion-item>
+    </ion-list>
+    <h1>Misc</h1>
+    <ion-list>
+        <ion-item *ngIf=Chara.vampire>Vampire</ion-item>
+    </ion-list>
+</ion-content>

@@ -1,19 +1,21 @@
 import { Component } from '@angular/core';
 
-import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
-import { HomePage } from '../home/home';
+import { CharactersPage } from '../characters/characters';
+import { EnchantmentSelectPage } from '../enchantment-select/enchantment-select';
+import { CharacterProvider } from '../../providers/character/character';
 
 @Component({
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
 
-  tab1Root = HomePage;
-  tab2Root = AboutPage;
-  tab3Root = ContactPage;
+    //TODO: Implement hiding the enchantments button if there are no characters stored.
+    
+  tab1Root = EnchantmentSelectPage;
+  tab2Root = CharactersPage;
 
-  constructor() {
-
+  constructor(public characters: CharacterProvider) {
+      
   }
+  
 }
